@@ -1,0 +1,27 @@
+from tkinter import *
+bee=Tk()
+c=Canvas(bee,bg="white",height=350,width=350)
+#upperwing
+up=c.create_polygon(117,170,180,70,250,70,200,170,117,170,fill="lightblue",smooth=True,outline="black",width=3)
+#body
+body=c.create_oval(100,150,270,252,fill="black")
+tail=c.create_polygon(270,195,270,210,292,203,270,195)
+#strips
+s=c.create_polygon(230,155,260,175,260,225,250,235,230,155,fill="gold",smooth=True)
+s=c.create_polygon(150,140,200,150,220,200,200,250,150,255,185,200,150,140,fill="gold",smooth=True)
+#face
+f=c.create_oval(60,140,140,230,fill="gold",outline="black",width=3)
+righteye=c.create_oval(85,170,105,200,fill="black")
+lefteye=c.create_oval(65,165,75,190,fill="black")
+sparkle1=c.create_oval(67,166,73,178,fill="white")
+sparkle2=c.create_oval(90,172,100,190,fill="white")
+smile=c.create_polygon(68,210,100,210,120,190,120,210,100,220,75,220,68,210,fill="brown",smooth=True)
+#antenna
+right=c.create_line(95,120,110,160,width=5)
+right=c.create_line(75,120,95,120,width=5)
+left=c.create_line(55,130,75,130,width=5)
+left=c.create_line(75,130,80,145,width=5)
+c.pack()
+#lowerwing
+down=c.create_polygon(130,170,170,100,300,80,240,170,130,170,fill="lightblue",smooth=True,outline="black",width=3)
+bee.mainloop()
